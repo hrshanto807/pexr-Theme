@@ -194,98 +194,26 @@
       </div>
 
       <div class="text-center">
-      <?php ?>
+      <?php 
+      $pexr_work_post = new WP_Query( array( 
+        'post_type'      =>  'pexr_work',
+        'posts_per_page' => 8,
+        
+      ));
+      if($pexr_work_post->have_posts()):while($pexr_work_post->have_posts()):$pexr_work_post->the_post();
+      ?>
 
         <div class="col-md-3 col-sm-6 nopadding">
           <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/13.jpg" alt="" />
+            <?php the_post_thumbnail('pexr_work_thumb');?>
             <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Model Structures</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
+              <h3 class="text-white font-weight-7 margin-bottom-1"><?php the_title();?></h3>
+              <p><?php echo wp_trim_words(get_the_content() ,15 , NULL)?></p>
             </figcaption>
-            <a href="#"></a>
+            <a href="<?php the_permalink();?>"></a>
           </figure>
         </div><!-- end item -->
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/14.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Looking Publishing</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/15.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Webpage as Packages</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/16.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Printer took Galley</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
-        <div class="clearfix"></div>
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/17.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Software Versions</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/18.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Popularise Release</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/19.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Classical Through</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
-        <div class="col-md-3 col-sm-6 nopadding">
-          <figure class="snip1543 less8">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/portfolio/11.jpg" alt="" />
-            <figcaption>
-              <h3 class="text-white font-weight-7 margin-bottom-1">Alteration Words</h3>
-              <p>Going to use a passage ipsum you need to be sure there anything application</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div><!-- end item -->
-
+      <?php endwhile;endif;?>
       </div>
 
     </div>

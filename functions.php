@@ -11,6 +11,8 @@ function pexr_basic_data()
     register_nav_menus(array(
         'main-menu'     =>  __('Main menu', 'pexr'),
     ));
+    add_theme_support('post-thumbnails');
+    add_image_size('pexr_work_thumb',700,450);
 };
 add_action('after_setup_theme', 'pexr_basic_data');
 
