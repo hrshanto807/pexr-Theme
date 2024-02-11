@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from gsrthemes.com/pexr/coming-soon.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 04:47:49 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible"  content="IE=edge">
+<title>PEXR | The Multipurpose Site Template</title>
+<meta name="keywords" content="" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile view -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicon --> 
+<link rel="shortcut icon" href="images/favicon.html">
+
+<link rel="stylesheet" type="text/css" href="js/bootstrap/bootstrap.min.css">
+
+<!-- Google fonts  -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> 
+
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+
+<link rel="stylesheet" media="screen" href="js/comingsoon/csoon.css" type="text/css" /> 
+
+<script src="../../code.jquery.com/jquery-1.9.0.min.js"></script>
+<script src="js/comingsoon/jquery.bcat.bgswitcher.js"></script>
+
+
+<script>
+$(document).ready(function() {
+  //Callback works only with direction = "down"
+  $('.flipTimer').flipTimer({ direction: 'down', date: 'June 27, 2018 03:30:30', callback: function() { alert('times up!'); } });
+});
+</script>
+    
+    
+    
+</head>
+
+
+<body>
+
+<div id="bg-body">
+</div><!--end -->
+
+<script>
+var srcBgArray = ["./js/comingsoon/img-slider-1.jpg","js/comingsoon/img-slider-2.jpg","./js/comingsoon/img-slider-3.jpg"];
+
+$(document).ready(function() {
+  $('#bg-body').bcatBGSwitcher({
+    urls: srcBgArray,
+    alt: 'Full screen background image',
+    links: true,
+    prevnext: true
+  });
+});
+</script><!--end of bg-body script-->
+
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+
+
+<div class="site-wrapper">
+
+<div class="comingsoon_page">
+<div class="container">
+	
+    <div class="topcontsoon">
+    
+    	<h2 style="font-size: 45px; color: #fff; font-weight: 700;">PEXR</h2>
+                
+        <h5><strong>We're Launching Soon</strong></h5>
+        
+    </div><!-- end section -->
+        
+    <div class="countdown_dashboard">
+      
+        <div class="flipTimer">
+        
+            <div class="days"></div>
+            
+            <div class="hours"></div>
+            
+            <div class="minutes"></div>
+            
+            <div class="seconds"></div>
+            
+            <div class="clearfix"></div>
+            
+            <div class="fttext">DAYS</div>
+            <div class="fttext">HRS</div>
+            <div class="fttext">MIN</div>
+            <div class="fttext">SEC</div>
+            
+        </div>
+        
+		
+    </div><!-- end section -->
+    
+    
+    <div class="clearfix"></div>
+    
+    <div class="socialiconssoon">
+    	
+        <p style="color:#fff;">Our website is under construction. We'll be here soon with our new awesome site. Get best experience with this one.</p>
+        
+        <br />
+		
+        <form name="myForm" action="#" onSubmit="return validateForm();" method="post">
+        
+        <input type="text" name="email" class="newslesoon" value="Enter email..." onFocus="if (this.value == 'Enter email...') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Enter email...';}" >
+        <input type="submit" value="Submit" class="newslesubmit">
+        
+        </form>
+
+        <div class="clearfix"></div>
+       	<br />
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-flickr"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-rss"></i></a>
+        
+	
+    </div><!-- end section -->
+
+</div>
+</div>
+
+</div>
+
+
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<script src="js/animations/js/animations.min.js"></script>
+
+<script src="js/comingsoon/jquery.flipTimer.js"></script>
+
+</body>
+
+<!-- Mirrored from gsrthemes.com/pexr/coming-soon.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Aug 2018 04:47:51 GMT -->
+</html>
