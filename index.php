@@ -226,114 +226,31 @@
   <div class="container">
     <div class="row nopadding">
 
-      <h2 class="uppercase text-white font-weight-8 margin-bottom-4 text-center">What We Do?</h2>
+      <h2 class="uppercase text-white font-weight-8 margin-bottom-4 text-center"><?php if(!empty($pexr['pexr_wedo_heading_title'])){
+        echo esc_html($pexr['pexr_wedo_heading_title']);
+      };?></h2>
 
-      <div class="col-md-12 nopadding">
+       <div class="col-md-12 nopadding">  
+        <?php $services_all_content = new WP_Query(array( 
+          'post_type'    => 'pexr-services',
+          'posts_per_page' => 6,
+        ));
+        if($services_all_content->have_posts()): while($services_all_content->have_posts()):$services_all_content->the_post();
+        $servie_meta = get_post_meta(get_the_ID(),'service_meta_faicon',true);
+        ?>
 
         <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="100">
           <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-eye text-white margin-top-1" aria-hidden="true"></i></div>
+            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="<?php if(!empty($servie_meta)){echo esc_attr($servie_meta);};?> margin-top-1 text-white" aria-hidden="true"></i></div>
             <div class="col-md-8 nopadding">
               <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">User Research</h5>
+              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2"><?php the_title();?></h5>
               <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
             </div>
-          </div>
+          </div>          
         </div><!-- end col -->
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="200">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-lightbulb-o text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Wireframe & Design</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="300">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-code text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Clean & Easy Code</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
+        <?php endwhile;endif;?>
         <div class="clearfix margin-bottom-2"></div>
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="400">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-bullhorn text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Development</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="500">
-          <div class="hover-shadow-3 active">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-leaf text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Fast & Light Weight</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="600">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-tablet text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Responsive Design</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-        <div class="clearfix margin-bottom-2"></div>
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="700">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-cogs text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Website Testing</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="800">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-magic text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Seo & Security</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-        <div class="col-md-4 nopadding animate-in" data-anim-type="fade-in" data-anim-delay="900">
-          <div class="hover-shadow-3">
-            <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="fa fa-heart-o text-white margin-top-1" aria-hidden="true"></i></div>
-            <div class="col-md-8 nopadding">
-              <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2">Life Time Support</h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
-            </div>
-          </div>
-        </div><!-- end col -->
-
-
       </div>
 
     </div>

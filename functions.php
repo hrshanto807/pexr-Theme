@@ -12,7 +12,7 @@ function pexr_basic_data()
         'main-menu'     =>  __('Main menu', 'pexr'),
     ));
     add_theme_support('post-thumbnails');
-    add_image_size('pexr_work_thumb',700,450);
+    add_image_size('pexr_work_thumb', 700, 450);
 };
 add_action('after_setup_theme', 'pexr_basic_data');
 
@@ -38,7 +38,7 @@ function pexr_all_file_enqueue_here()
     wp_enqueue_style('pexr-corporate', get_theme_file_uri('/css/corporate.css'));
     wp_enqueue_style('pexr-shortcodes', get_theme_file_uri('/css/shortcodes.css'));
     wp_enqueue_style('font-awesome', get_theme_file_uri('/fonts/font-awesome/css/font-awesome.min.css'));
-    // wp_enqueue_style('fontawesome', get_theme_file_uri('/fontawsome/css/all.min.css'));
+     wp_enqueue_style('fontawesome', get_theme_file_uri('/fontawsome/css/all.min.css'));
     wp_enqueue_style('Simple-Line-Icons-Webfont', get_theme_file_uri('/fonts/Simple-Line-Icons-Webfont/simple-line-icons.css'));
     wp_enqueue_style('et-line-font', get_theme_file_uri('/fonts/et-line-font/et-line-font.css'));
     wp_enqueue_style('revolution-slider-settings', get_theme_file_uri('/js/revolution-slider/css/settings.css'));
@@ -103,9 +103,19 @@ function pexr_tag_allow()
     };
 }
 
+// cmb2 icon folder enqueue
+function pexr_icon_folder()
+{
+    return get_template_directory_uri() . '/inc/cmb2-aiconselect'; //Change to correct path.
+}
+
+add_filter('sa_cmb2_field_faiconselect_asset_path', 'pexr_icon_folder');
 
 
 require_once get_template_directory() . "/theme-option/redux-framework.php";
 require_once get_template_directory() . "/theme-option/sample/options.php";
 require_once get_template_directory() . "/inc/fallback-menu.php";
 require_once get_template_directory() . "/inc/pexrr-custom-post.php";
+require_once get_template_directory() . "/inc/CMB2/init.php";
+require_once get_template_directory() . "/inc/cmb2-aiconselect/iconselect.php";
+require_once get_template_directory() . "/inc/CMB2/fileds-option.php";

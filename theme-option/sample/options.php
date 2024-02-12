@@ -344,41 +344,41 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Slider One',
 	'desc'    => __('This is Slider Area One', "pexr"),
 	'id'      => 'slide_one',
-	'subsection'=> true,
+	'subsection' => true,
 	'fields'  => array(
 		array(
-			'type'     => 'media', 
+			'type'     => 'media',
 			'id'       => 'pexr_silder_one_bg',
-			'title'    =>  __('Slider One Bacground Image','pexr'),
-			'desc'    =>  __('Please ADD First Slider Background Image','pexr')
+			'title'    =>  __('Slider One Bacground Image', 'pexr'),
+			'desc'    =>  __('Please ADD First Slider Background Image', 'pexr')
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_one_title',
-			'title'    =>  __('Slider One Title','pexr'),
-			'desc'     =>  __('Please ADD First Slider Title','pexr'),
-			'default'  => __('We Believe Great Design <br/> Make Great Business',"pexr"),
+			'title'    =>  __('Slider One Title', 'pexr'),
+			'desc'     =>  __('Please ADD First Slider Title', 'pexr'),
+			'default'  => __('We Believe Great Design <br/> Make Great Business', "pexr"),
 		),
 		array(
-			'type'     => 'textarea', 
+			'type'     => 'textarea',
 			'id'       => 'pexr_silder_one_content',
-			'title'    =>  __('Slider One Content','pexr'),
-			'desc'     =>  __('Please ADD First Slider Content','pexr'),
-			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!','pexr')
+			'title'    =>  __('Slider One Content', 'pexr'),
+			'desc'     =>  __('Please ADD First Slider Content', 'pexr'),
+			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!', 'pexr')
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_one_button',
-			'title'    =>  __('Slider One Button','pexr'),
-			'desc'    =>  __('Please ADD First Slider Button Name','pexr'),
-			'default'  => __('Purchase Now',"pexr"),
+			'title'    =>  __('Slider One Button', 'pexr'),
+			'desc'    =>  __('Please ADD First Slider Button Name', 'pexr'),
+			'default'  => __('Purchase Now', "pexr"),
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_one_button-link',
-			'title'    =>  __('Slider One Button Link','pexr'),
-			'desc'    =>  __('Please ADD First Slider Button Link','pexr'),
-			'validate'=> 'url'
+			'title'    =>  __('Slider One Button Link', 'pexr'),
+			'desc'    =>  __('Please ADD First Slider Button Link', 'pexr'),
+			'validate' => 'url'
 		),
 
 	)
@@ -388,41 +388,41 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Slider Two',
 	'desc'    => __('This is Slider Area One', "pexr"),
 	'id'      => 'slide_two',
-	'subsection'=> true,
+	'subsection' => true,
 	'fields'  => array(
 		array(
-			'type'     => 'media', 
+			'type'     => 'media',
 			'id'       => 'pexr_silder_two_bg',
-			'title'    =>  __('Slider Two Bacground Image','pexr'),
-			'desc'    =>  __('Please ADD Seconed Slider Background Image','pexr')
+			'title'    =>  __('Slider Two Bacground Image', 'pexr'),
+			'desc'    =>  __('Please ADD Seconed Slider Background Image', 'pexr')
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_two_title',
-			'title'    =>  __('Slider Two Title','pexr'),
-			'desc'     =>  __('Please ADD Seconed Slider Title','pexr'),
-			'default'  => __('We Create Awesome<br /> Website Templates ',"pexr"),
+			'title'    =>  __('Slider Two Title', 'pexr'),
+			'desc'     =>  __('Please ADD Seconed Slider Title', 'pexr'),
+			'default'  => __('We Create Awesome<br /> Website Templates ', "pexr"),
 		),
 		array(
-			'type'     => 'textarea', 
+			'type'     => 'textarea',
 			'id'       => 'pexr_silder_two_content',
-			'title'    =>  __('Slider Two Content','pexr'),
-			'desc'     =>  __('Please ADD Seconed Slider Content','pexr'),
-			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!','pexr')
+			'title'    =>  __('Slider Two Content', 'pexr'),
+			'desc'     =>  __('Please ADD Seconed Slider Content', 'pexr'),
+			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!', 'pexr')
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_two_button',
-			'title'    =>  __('Slider Two Button','pexr'),
-			'desc'    =>  __('Please ADD Seconed Slider Button Name','pexr'),
-			'default'  => __('Purchase Now',"pexr"),
+			'title'    =>  __('Slider Two Button', 'pexr'),
+			'desc'    =>  __('Please ADD Seconed Slider Button Name', 'pexr'),
+			'default'  => __('Purchase Now', "pexr"),
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_two_button-link',
-			'title'    =>  __('Slider Two Button Link','pexr'),
-			'desc'    =>  __('Please ADD Seconed Slider Button Link','pexr'),
-			'validate'=> 'url'
+			'title'    =>  __('Slider Two Button Link', 'pexr'),
+			'desc'    =>  __('Please ADD Seconed Slider Button Link', 'pexr'),
+			'validate' => 'url'
 		),
 
 	)
@@ -432,41 +432,41 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Slider Three',
 	'desc'    => __('This is Slider Area Three', "pexr"),
 	'id'      => 'slide_three',
-	'subsection'=> true,
+	'subsection' => true,
 	'fields'  => array(
 		array(
-			'type'     => 'media', 
+			'type'     => 'media',
 			'id'       => 'pexr_silder_three_bg',
-			'title'    =>  __('Slider Three Bacground Image','pexr'),
-			'desc'    =>  __('Please ADD Third Slider Background Image','pexr')
+			'title'    =>  __('Slider Three Bacground Image', 'pexr'),
+			'desc'    =>  __('Please ADD Third Slider Background Image', 'pexr')
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_three_title',
-			'title'    =>  __('Slider Three Title','pexr'),
-			'desc'     =>  __('Please ADD Third Slider Title','pexr'),
-			'default'  => __('We Build Successful <br />Digital Stories for Web',"pexr"),
+			'title'    =>  __('Slider Three Title', 'pexr'),
+			'desc'     =>  __('Please ADD Third Slider Title', 'pexr'),
+			'default'  => __('We Build Successful <br />Digital Stories for Web', "pexr"),
 		),
 		array(
-			'type'     => 'textarea', 
+			'type'     => 'textarea',
 			'id'       => 'pexr_silder_three_content',
-			'title'    =>  __('Slider Three Content','pexr'),
-			'desc'     =>  __('Please ADD Third Slider Content','pexr'),
-			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!','pexr')
+			'title'    =>  __('Slider Three Content', 'pexr'),
+			'desc'     =>  __('Please ADD Third Slider Content', 'pexr'),
+			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!', 'pexr')
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_three_button',
-			'title'    =>  __('Slider Three Button','pexr'),
-			'desc'    =>  __('Please ADD Third Slider Button Name','pexr'),
-			'default'  => __('Purchase Now',"pexr"),
+			'title'    =>  __('Slider Three Button', 'pexr'),
+			'desc'    =>  __('Please ADD Third Slider Button Name', 'pexr'),
+			'default'  => __('Purchase Now', "pexr"),
 		),
 		array(
-			'type'     => 'text', 
+			'type'     => 'text',
 			'id'       => 'pexr_silder_three_button-link',
-			'title'    =>  __('Slider Three Button Link','pexr'),
-			'desc'    =>  __('Please ADD Third Slider Button Link','pexr'),
-			'validate'=> 'url'
+			'title'    =>  __('Slider Three Button Link', 'pexr'),
+			'desc'    =>  __('Please ADD Third Slider Button Link', 'pexr'),
+			'validate' => 'url'
 		),
 
 	)
@@ -484,22 +484,22 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Advantace One',
 	'desc'    => __('This is Advantace Area one', "pexr"),
 	'id'      => 'advantace_one',
-	'subsection'=> true,
-	'fields'  => array(	
-           array( 
+	'subsection' => true,
+	'fields'  => array(
+		array(
 			'id'       =>   'advantace_one_title',
-			'title'    =>  __('Advantace One Title','pexr'),
+			'title'    =>  __('Advantace One Title', 'pexr'),
 			'type'     => 'text',
-			'desc'     =>  __('Please input here advance one title' , 'pexr'),
-			'default'  => __('Multiple Designed Powerful Templates','pexr'),
-		   ),
-           array( 
+			'desc'     =>  __('Please input here advance one title', 'pexr'),
+			'default'  => __('Multiple Designed Powerful Templates', 'pexr'),
+		),
+		array(
 			'id'       =>   'advantace_one_content',
-			'title'    =>  __('Advantace One Content','pexr'),
+			'title'    =>  __('Advantace One Content', 'pexr'),
 			'type'     => 'textarea',
-			'desc'     =>  __('Please input here advance one Content' , 'pexr'),
-			'default'  => __('Default model the and a search many web sites the stilin infancy versions have over the years.','pexr'),
-		   ),
+			'desc'     =>  __('Please input here advance one Content', 'pexr'),
+			'default'  => __('Default model the and a search many web sites the stilin infancy versions have over the years.', 'pexr'),
+		),
 	)
 ));
 
@@ -508,22 +508,22 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Advantace Two',
 	'desc'    => __('This is Advantace Area Two', "pexr"),
 	'id'      => 'advantace_two',
-	'subsection'=> true,
-	'fields'  => array(	
-           array( 
+	'subsection' => true,
+	'fields'  => array(
+		array(
 			'id'       =>   'advantace_two_title',
-			'title'    =>  __('Advantace Two Title','pexr'),
+			'title'    =>  __('Advantace Two Title', 'pexr'),
 			'type'     => 'text',
-			'desc'     =>  __('Please input here advance Two title' , 'pexr'),
-			'default'  => __('Tons of Featured Shortcodes','pexr'),
-		   ),
-           array( 
+			'desc'     =>  __('Please input here advance Two title', 'pexr'),
+			'default'  => __('Tons of Featured Shortcodes', 'pexr'),
+		),
+		array(
 			'id'       =>   'advantace_two_content',
-			'title'    =>  __('Advantace Two Content','pexr'),
+			'title'    =>  __('Advantace Two Content', 'pexr'),
 			'type'     => 'textarea',
-			'desc'     =>  __('Please input here advance Two Content' , 'pexr'),
-			'default'  => __('Default model the and a search many web sites the stilin infancy versions have over the years.','pexr'),
-		   ),
+			'desc'     =>  __('Please input here advance Two Content', 'pexr'),
+			'default'  => __('Default model the and a search many web sites the stilin infancy versions have over the years.', 'pexr'),
+		),
 	)
 ));
 // advantace area three
@@ -531,22 +531,22 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Advantace Three',
 	'desc'    => __('This is Advantace Area three', "pexr"),
 	'id'      => 'advantace_three',
-	'subsection'=> true,
-	'fields'  => array(	
-           array( 
+	'subsection' => true,
+	'fields'  => array(
+		array(
 			'id'       =>   'advantace_three_title',
-			'title'    =>  __('Advantace Three Title','pexr'),
+			'title'    =>  __('Advantace Three Title', 'pexr'),
 			'type'     => 'text',
-			'desc'     =>  __('Please input here advance three title' , 'pexr'),
-			'default'  => __('Can be used for any type of website','pexr'),
-		   ),
-           array( 
+			'desc'     =>  __('Please input here advance three title', 'pexr'),
+			'default'  => __('Can be used for any type of website', 'pexr'),
+		),
+		array(
 			'id'       =>   'advantace_three_content',
-			'title'    =>  __('Advantace Three Content','pexr'),
+			'title'    =>  __('Advantace Three Content', 'pexr'),
 			'type'     => 'textarea',
-			'desc'     =>  __('Please input here advance three Content' , 'pexr'),
-			'default'  => __('Default model the and a search many web sites the stilin infancy versions have over the years.','pexr'),
-		   ),
+			'desc'     =>  __('Please input here advance three Content', 'pexr'),
+			'default'  => __('Default model the and a search many web sites the stilin infancy versions have over the years.', 'pexr'),
+		),
 	)
 ));
 
@@ -564,21 +564,37 @@ Redux::set_section($opt_name, array(
 	'title'   => 'Our Work section Heading',
 	'desc'    => __('This is Work section heading area', "pexr"),
 	'id'      => 'pexr_work_heading_area',
-	'subsection'=> true,
-	'fields'  => array(	
-        array( 
+	'subsection' => true,
+	'fields'  => array(
+		array(
 			'id'              =>  'pexr_work_heading_title',
 			'type'            => 'text',
-			'title'           => __('Our Work Heading Title','pexr'),
-			'default'         => __('Our Works','pexr')
+			'title'           => __('Our Work Heading Title', 'pexr'),
+			'default'         => __('Our Works', 'pexr')
 		),
-        array( 
+		array(
 			'id'              =>  'pexr_work_heading_content',
 			'type'            => 'textarea',
-			'title'           => __('Our Work Heading Content','pexr'),
-			'default'         => __('There are many alteration in some form or randomised words','pexr')
+			'title'           => __('Our Work Heading Content', 'pexr'),
+			'default'         => __('There are many alteration in some form or randomised words', 'pexr')
 		),
-	) 
+	)
+));
+// service area heading
+Redux::set_section($opt_name, array(
+	'title'   => 'What We Do section Heading',
+	'desc'    => __('This is We Do section heading area', "pexr"),
+	'id'      => 'pexr_wedo_heading_area',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'              =>  'pexr_wedo_heading_title',
+			'type'            => 'text',
+			'title'           => __('We Do Heading Title', 'pexr'),
+			'default'         => __('What We Do?','pexr')
+		)
+
+	)
 ));
 // All pexr heading section end
 
