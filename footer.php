@@ -75,7 +75,7 @@
     <div class="container-fluid border-top-light1 padding-top-3 padding-bottom-3">
 		<div class="container">
         
-			<div class="col-md-6 col-sm-12 col-xs-12 text-left text-small2 respo text-white opacity-5">Copyright 2018 © Gsrthemes9</div>
+			<div class="col-md-6 col-sm-12 col-xs-12 text-left text-small2 respo text-white opacity-5">Copyright <?php echo date("Y");?> © HR Shanto</div>
             
 			<div class="col-md-6 col-sm-12 col-xs-12 text-right respo">
                 <ul class="footer-social-icons round">

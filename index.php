@@ -536,39 +536,39 @@
   <div class="container">
     <div class="row">
 
-      <h2 class="uppercase font-weight-8 margin-bottom-4">We Love Fun Facts</h2>
+      <h2 class="uppercase font-weight-8 margin-bottom-4"><?php if(!empty($pexr['pexr_we_love_heading_title'])){echo esc_html($pexr['pexr_we_love_heading_title']);};?></h2>
 
       <div class="col-md-1"></div>
 
       <div class="col-md-2 col-sm-2 col-xs-6 margin-bottom">
-        <h2 class="text-primary font-weight-7 nomargin">4599</h2>
-        <h6>Projects</h6>
+        <h2 class="text-primary font-weight-7 nomargin"><?php if(!empty($pexr['we_love_number_one'])){echo esc_html($pexr['we_love_number_one']);};?></h2>
+        <h6><?php if(!empty($pexr['we_love_name_one'])){echo esc_html($pexr['we_love_name_one']);};?></h6>
       </div><!--end item-->
 
       <div class="col-md-2 col-sm-2 col-xs-6 border-left-1 margin-bottom">
-        <h2 class="text-primary font-weight-7 nomargin">567</h2>
-        <h6>Clients</h6>
+        <h2 class="text-primary font-weight-7 nomargin"><?php if(!empty($pexr['we_love_number_two'])){echo esc_html($pexr['we_love_number_two']);};?></h2>
+        <h6><?php if(!empty($pexr['we_love_name_two'])){echo esc_html($pexr['we_love_name_two']);};?></h6>
       </div><!--end item-->
 
       <div class="col-md-2 col-sm-2 col-xs-6 border-left-1 margin-bottom">
-        <h2 class="text-primary font-weight-7 nomargin">3699</h2>
-        <h6>Done</h6>
+        <h2 class="text-primary font-weight-7 nomargin"><?php if(!empty($pexr['we_love_number_three'])){echo esc_html($pexr['we_love_number_three']);};?></h2>
+        <h6><?php if(!empty($pexr['we_love_name_three'])){echo esc_html($pexr['we_love_name_three']);};?></h6>
       </div><!--end item-->
 
       <div class="col-md-2 col-sm-2 col-xs-6 border-left-1 margin-bottom">
-        <h2 class="text-primary font-weight-7 nomargin">459</h2>
-        <h6>Awards</h6>
+        <h2 class="text-primary font-weight-7 nomargin"><?php if(!empty($pexr['we_love_number_four'])){echo esc_html($pexr['we_love_number_four']);};?></h2>
+        <h6><?php if(!empty($pexr['we_love_name_four'])){echo esc_html($pexr['we_love_name_four']);};?></h6>
       </div><!--end item-->
 
       <div class="col-md-2 col-sm-2 col-xs-12 border-left-1">
-        <h2 class="text-primary font-weight-7 nomargin">9457299</h2>
-        <h6>Love</h6>
+        <h2 class="text-primary font-weight-7 nomargin"><?php if(!empty($pexr['we_love_number_five'])){echo esc_html($pexr['we_love_number_five']);};?></h2>
+        <h6><?php if(!empty($pexr['we_love_name_five'])){echo esc_html($pexr['we_love_name_five']);};?></h6>
       </div><!--end item-->
 
       <p class="clearfix margin-bottom-5"></p>
 
-      <div class="col-md-6 text-right respo margin-bottom"><a href="#" class="sitebutton-1 sty2 dark2 roboto font-weight-7 uppercase">Show Testimonials</a></div>
-      <div class="col-md-6 text-left respo"><a href="#" class="sitebutton-1 sty2 dark roboto font-weight-7 uppercase">Get Started Now!</a></div>
+      <div class="col-md-6 text-right respo margin-bottom"><a href="<?php if(!empty($pexr['we_love_btn_one_link'])){echo esc_attr($pexr['we_love_btn_one_link']);};?>" class="sitebutton-1 sty2 dark2 roboto font-weight-7 uppercase"><?php if(!empty($pexr['we_love_btn_one'])){echo esc_html($pexr['we_love_btn_one']);};?></a></div>
+      <div class="col-md-6 text-left respo"><a href="<?php if(!empty($pexr['we_love_btn_rwo_link'])){echo esc_html($pexr['we_love_btn_rwo_link']);};?>" class="sitebutton-1 sty2 dark roboto font-weight-7 uppercase"><?php if(!empty($pexr['we_love_btn_two'])){echo esc_attr($pexr['we_love_btn_two']);};?></a></div>
 
     </div>
   </div>
@@ -585,11 +585,11 @@
 
         <div class="border-inside-1 padding-top-4 padding-bottom-6 padding-left-5 padding-right-5">
 
-          <h3 class="uppercase font-weight-8 line-height-5 margin-bottom-2">Build your own website the easy way</h3>
+          <h3 class="uppercase font-weight-8 line-height-5 margin-bottom-2"><?php if(!empty($pexr['build_website_title'])){echo esc_html($pexr['build_website_title']);};?></h3>
 
-          <h6 class="font-weight-4 line-height-3 margin-bottom-4">Passages of Lorem Ipsum available, but the majority have alteration handful of model sentence structures to generate which looks reasonable the majority have alteration handful model sentence structures generate which looks reasonable.</h6>
+          <h6 class="font-weight-4 line-height-3 margin-bottom-4"><?php if(!empty($pexr['build_website_content'])){echo esc_html($pexr['build_website_content']);};?></h6>
 
-          <a href="#" class="sitebutton-1 sty2 roboto font-weight-7 uppercase">More Details</a>
+          <a href="<?php if(!empty($pexr['build_website_button_link'])){echo esc_html($pexr['build_website_button_link']);};?>" class="sitebutton-1 sty2 roboto font-weight-7 uppercase"><?php if(!empty($pexr['build_website_button'])){echo esc_html($pexr['build_website_button']);};?></a>
 
         </div>
 
@@ -1315,12 +1315,24 @@
     <div class="row">
 
       <div class="col-md-12 nopadding">
-        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php echo get_template_directory_uri(); ?>/images/clogo1.png" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
-        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php echo get_template_directory_uri(); ?>/images/clogo2.png" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
-        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php echo get_template_directory_uri(); ?>/images/clogo3.png" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
-        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php echo get_template_directory_uri(); ?>/images/clogo4.png" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
-        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php echo get_template_directory_uri(); ?>/images/clogo5.png" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
-        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php echo get_template_directory_uri(); ?>/images/clogo6.png" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
+        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php if(!empty($pexr['brand_logo_one'])){
+          echo esc_url($pexr['brand_logo_one']['url']);
+        };?>" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
+        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php if(!empty($pexr['brand_logo_two'])){
+          echo esc_url($pexr['brand_logo_two']['url']);
+        };?>" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
+        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php if(!empty($pexr['brand_logo_three'])){
+          echo esc_url($pexr['brand_logo_three']['url']);
+        };?>" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
+        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php if(!empty($pexr['brand_logo_four'])){
+          echo esc_url($pexr['brand_logo_four']['url']);
+        };?>" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
+        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php if(!empty($pexr['brand_logo_five'])){
+          echo esc_url($pexr['brand_logo_five']['url']);
+        };?>" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
+        <div class="col-md-2 col-sm-4 col-xs-6"><img src="<?php if(!empty($pexr['brand_logo_six'])){
+          echo esc_url($pexr['brand_logo_six']['url']);
+        };?>" alt="" class="grayscale img-responsive-2 opacity-5" /></div>
       </div>
 
 

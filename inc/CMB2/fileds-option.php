@@ -23,7 +23,7 @@ function services_post_fileds()
 }
 add_action('cmb2_admin_init', 'services_post_fileds');
 
-// Support area meta field
+// brandiing design area meta field
 function branding_design_post_fileds()
 {
     $branding_design_post = new_cmb2_box(array(

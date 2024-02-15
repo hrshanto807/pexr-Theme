@@ -84,7 +84,7 @@ $args = array(
 	'menu_type'                 => 'menu',
 
 	// Show the sections below the admin menu item or not.
-	'allow_sub_menu'            => true,
+	'allow_sub_menu'            => false,
 
 	// The text to appear in the admin menu.
 	'menu_title'                => esc_html__('Theme Options', 'pexr'),
@@ -611,6 +611,23 @@ Redux::set_section($opt_name, array(
 
 	)
 ));
+
+// We Love Fun Facts area heading
+Redux::set_section($opt_name, array(
+	'title'   => 'We Love Fun Facts section Heading',
+	'desc'    => __('This is We Love Fun Facts section heading area', "pexr"),
+	'id'      => 'pexr_we_love_heading_area',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'              =>  'pexr_we_love_heading_title',
+			'type'            => 'text',
+			'title'           => __('We Love Fun Facts Heading Title', 'pexr'),
+			'default'         => __('We Love Fun Facts?', 'pexr')
+		)
+
+	)
+));
 // All pexr heading section end
 
 // What we do area bottom start
@@ -848,6 +865,404 @@ Redux::set_section($opt_name, array(
 		)
 	)
 ));
+// We love fun facts area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Section', 'pexr'),
+	'id'               => 'we_love_design',
+));
+// We love fun facts one area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Content One', 'pexr'),
+	'id'               => 'love_design_one',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Number Of Projects', 'pexr'),
+			'id'                 => 'we_love_number_one',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Number of Preject', 'pexr'),
+			'default'            => __('4599 ', 'pexr')
+		),
+		array(
+			'title'              => __('Name of Project', 'pexr'),
+			'id'                 => 'we_love_name_one',
+			'type'               => 'text',
+			'desc'               => __('Please Wright name like Projects', 'pexr'),
+			'default'            => __('Projects', 'pexr')
+		),
+		
+	)
+));
+// We love fun facts two area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Content Two', 'pexr'),
+	'id'               => 'love_design_two',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Number Of Clients', 'pexr'),
+			'id'                 => 'we_love_number_two',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Number of Clients', 'pexr'),
+			'default'            => __('567 ', 'pexr')
+		),
+		array(
+			'title'              => __('Name of Clients', 'pexr'),
+			'id'                 => 'we_love_name_two',
+			'type'               => 'text',
+			'desc'               => __('Please Wright name like Clients', 'pexr'),
+			'default'            => __('Clients', 'pexr')
+		),
+		
+	)
+));
+// We love fun facts three area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Content Three', 'pexr'),
+	'id'               => 'love_design_three',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Number Of Done Works', 'pexr'),
+			'id'                 => 'we_love_number_three',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Number of Done Works', 'pexr'),
+			'default'            => __('3699 ', 'pexr')
+		),
+		array(
+			'title'              => __('Name of Done Works', 'pexr'),
+			'id'                 => 'we_love_name_three',
+			'type'               => 'text',
+			'desc'               => __('Please Wright name like Done Works', 'pexr'),
+			'default'            => __('Done', 'pexr')
+		),
+		
+	)
+));
+// We love fun facts four area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Content Four', 'pexr'),
+	'id'               => 'love_design_four',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Number Of Awards', 'pexr'),
+			'id'                 => 'we_love_number_four',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Number of Awards', 'pexr'),
+			'default'            => __('4599 ', 'pexr')
+		),
+		array(
+			'title'              => __('Name of Awards', 'pexr'),
+			'id'                 => 'we_love_name_four',
+			'type'               => 'text',
+			'desc'               => __('Please Wright name like Awards', 'pexr'),
+			'default'            => __('Awards', 'pexr')
+		),
+		
+	)
+));
+// We love fun facts five area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Content Five', 'pexr'),
+	'id'               => 'love_design_five',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Number Of Love', 'pexr'),
+			'id'                 => 'we_love_number_five',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Number of Love', 'pexr'),
+			'default'            => __('9457299 ', 'pexr')
+		),
+		array(
+			'title'              => __('Name of Love', 'pexr'),
+			'id'                 => 'we_love_name_five',
+			'type'               => 'text',
+			'desc'               => __('Please Wright name like Love', 'pexr'),
+			'default'            => __('Love', 'pexr')
+		),
+		
+	)
+));
+// We love fun facts Button one start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Button One', 'pexr'),
+	'id'               => 'love_design_btn_one',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Name Of Button One', 'pexr'),
+			'id'                 => 'we_love_btn_one',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Button One Name', 'pexr'),
+			'default'            => __('Show Testimonials', 'pexr')
+		),
+		array(
+			'title'              => __('Name Of Button One Link', 'pexr'),
+			'id'                 => 'we_love_btn_one_link',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Button One  Link', 'pexr'),
+			
+		),
+		
+	)
+));
+// We love fun facts Button two start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('We Love Fun Facts Button Two', 'pexr'),
+	'id'               => 'love_design_btn_two',
+	'subsection'       => true,
+	'fields'           => array(
+
+		array(
+			'title'              => __('Name Of Button Two', 'pexr'),
+			'id'                 => 'we_love_btn_two',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Button Two Name', 'pexr'),
+			'default'            => __('Get Started Now!', 'pexr')
+		),
+		array(
+			'title'              => __('Name Of Button Two Link', 'pexr'),
+			'id'                 => 'we_love_btn_two_link',
+			'type'               => 'text',
+			'desc'               => __('Please Input Your Button Two  Link', 'pexr'),
+			
+		),
+		
+		
+	)
+));
+
+// Build Own Website area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('Build Own Website Section', 'pexr'),
+	'id'               => 'build_website',
+	'fields'           => array(
+
+		array(
+			'title'              => __('Section Title', 'pexr'),
+			'id'                 => 'build_website_title',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your Title For Build Own Website', 'pexr'),
+			'default'            => __('We Believe Build Own Website Can Make Great Business ', 'pexr')
+		),		
+		array(
+			'title'              => __('Section Content', 'pexr'),
+			'id'                 => 'build_website_content',
+			'type'               => 'textarea',
+			'desc'               => __('Please Wright Your content For Build Own Website', 'pexr'),
+			'default'            => __('Passages of Lorem Ipsum available, but the majority have alteration handful of model sentence structures to generate which looks reasonable the majority have alteration handful model sentence structures generate which looks reasonable.', 'pexr')
+		),
+		array(
+			'title'              => __('Section button', 'pexr'),
+			'id'                 => 'build_website_button',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your button name', 'pexr'),
+			'default'            => __('More Dettails', 'pexr')
+		),
+		array(
+			'title'              => __('Section Button Link', 'pexr'),
+			'id'                 => 'build_website_button_link',
+			'type'               => 'text',
+			'desc'               => __('Inter Your Link For This Button', 'pexr'),
+
+		)
+	)
+));
+
+// // SLide section start
+// Redux::set_section($opt_name, array(
+// 	'title'   => 'Slider Area',
+// 	'desc'    => __('This is Slider Area ', "pexr"),
+// 	'id'      => 'slide_all',
+// ));
+
+// // slider area one
+// Redux::set_section($opt_name, array(
+// 	'title'   => 'Slider One',
+// 	'desc'    => __('This is Slider Area One', "pexr"),
+// 	'id'      => 'slide_one',
+// 	'subsection' => true,
+// 	'fields'  => array(
+// 		array(
+// 			'type'     => 'media',
+// 			'id'       => 'pexr_silder_one_bg',
+// 			'title'    =>  __('Slider One Bacground Image', 'pexr'),
+// 			'desc'    =>  __('Please ADD First Slider Background Image', 'pexr')
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_one_title',
+// 			'title'    =>  __('Slider One Title', 'pexr'),
+// 			'desc'     =>  __('Please ADD First Slider Title', 'pexr'),
+// 			'default'  => __('We Believe Great Design <br/> Make Great Business', "pexr"),
+// 		),
+// 		array(
+// 			'type'     => 'textarea',
+// 			'id'       => 'pexr_silder_one_content',
+// 			'title'    =>  __('Slider One Content', 'pexr'),
+// 			'desc'     =>  __('Please ADD First Slider Content', 'pexr'),
+// 			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!', 'pexr')
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_one_button',
+// 			'title'    =>  __('Slider One Button', 'pexr'),
+// 			'desc'    =>  __('Please ADD First Slider Button Name', 'pexr'),
+// 			'default'  => __('Purchase Now', "pexr"),
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_one_button-link',
+// 			'title'    =>  __('Slider One Button Link', 'pexr'),
+// 			'desc'    =>  __('Please ADD First Slider Button Link', 'pexr'),
+// 			'validate' => 'url'
+// 		),
+
+// 	)
+// ));
+// // slider area two
+// Redux::set_section($opt_name, array(
+// 	'title'   => 'Slider Two',
+// 	'desc'    => __('This is Slider Area One', "pexr"),
+// 	'id'      => 'slide_two',
+// 	'subsection' => true,
+// 	'fields'  => array(
+// 		array(
+// 			'type'     => 'media',
+// 			'id'       => 'pexr_silder_two_bg',
+// 			'title'    =>  __('Slider Two Bacground Image', 'pexr'),
+// 			'desc'    =>  __('Please ADD Seconed Slider Background Image', 'pexr')
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_two_title',
+// 			'title'    =>  __('Slider Two Title', 'pexr'),
+// 			'desc'     =>  __('Please ADD Seconed Slider Title', 'pexr'),
+// 			'default'  => __('We Create Awesome<br /> Website Templates ', "pexr"),
+// 		),
+// 		array(
+// 			'type'     => 'textarea',
+// 			'id'       => 'pexr_silder_two_content',
+// 			'title'    =>  __('Slider Two Content', 'pexr'),
+// 			'desc'     =>  __('Please ADD Seconed Slider Content', 'pexr'),
+// 			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!', 'pexr')
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_two_button',
+// 			'title'    =>  __('Slider Two Button', 'pexr'),
+// 			'desc'    =>  __('Please ADD Seconed Slider Button Name', 'pexr'),
+// 			'default'  => __('Purchase Now', "pexr"),
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_two_button-link',
+// 			'title'    =>  __('Slider Two Button Link', 'pexr'),
+// 			'desc'    =>  __('Please ADD Seconed Slider Button Link', 'pexr'),
+// 			'validate' => 'url'
+// 		),
+
+// 	)
+// ));
+// // slider area three
+// Redux::set_section($opt_name, array(
+// 	'title'   => 'Slider Three',
+// 	'desc'    => __('This is Slider Area Three', "pexr"),
+// 	'id'      => 'slide_three',
+// 	'subsection' => true,
+// 	'fields'  => array(
+// 		array(
+// 			'type'     => 'media',
+// 			'id'       => 'pexr_silder_three_bg',
+// 			'title'    =>  __('Slider Three Bacground Image', 'pexr'),
+// 			'desc'    =>  __('Please ADD Third Slider Background Image', 'pexr')
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_three_title',
+// 			'title'    =>  __('Slider Three Title', 'pexr'),
+// 			'desc'     =>  __('Please ADD Third Slider Title', 'pexr'),
+// 			'default'  => __('We Build Successful <br />Digital Stories for Web', "pexr"),
+// 		),
+// 		array(
+// 			'type'     => 'textarea',
+// 			'id'       => 'pexr_silder_three_content',
+// 			'title'    =>  __('Slider Three Content', 'pexr'),
+// 			'desc'     =>  __('Please ADD Third Slider Content', 'pexr'),
+// 			'default'  => __('Professional creativity clean featured website templates for your business<br />Let’s start an awesome project now!', 'pexr')
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_three_button',
+// 			'title'    =>  __('Slider Three Button', 'pexr'),
+// 			'desc'    =>  __('Please ADD Third Slider Button Name', 'pexr'),
+// 			'default'  => __('Purchase Now', "pexr"),
+// 		),
+// 		array(
+// 			'type'     => 'text',
+// 			'id'       => 'pexr_silder_three_button-link',
+// 			'title'    =>  __('Slider Three Button Link', 'pexr'),
+// 			'desc'    =>  __('Please ADD Third Slider Button Link', 'pexr'),
+// 			'validate' => 'url'
+// 		),
+
+// 	)
+// ));
+// // SLide section end
+
+// brand Logo 
+Redux:: set_section($opt_name,array( 
+	'title'       => __('Brand Logo', 'pexr'),
+	'id'          => 'pexr_brand_logo',
+	'fields'      => array( 
+		array( 
+			"title"        => __('Brand Logo One', 'pexr'),
+			'id'           => 'brand_logo_one',
+			'type'         => 'media',
+			'desc'         => __("Please Input Brand Logo One","pexr")
+		),
+		array( 
+			"title"        => __('Brand Logo Two', 'pexr'),
+			'id'           => 'brand_logo_two',
+			'type'         => 'media',
+			'desc'         => __("Please Input Brand Logo Two","pexr")
+		),
+		array( 
+			"title"        => __('Brand Logo Three', 'pexr'),
+			'id'           => 'brand_logo_three',
+			'type'         => 'media',
+			'desc'         => __("Please Input Brand Logo Three","pexr")
+		),
+		array( 
+			"title"        => __('Brand Logo Four', 'pexr'),
+			'id'           => 'brand_logo_four',
+			'type'         => 'media',
+			'desc'         => __("Please Input Brand Logo Four","pexr")
+		),
+		array( 
+			"title"        => __('Brand Logo Five', 'pexr'),
+			'id'           => 'brand_logo_five',
+			'type'         => 'media',
+			'desc'         => __("Please Input Brand Logo Five","pexr")
+		),
+		array( 
+			"title"        => __('Brand Logo Six', 'pexr'),
+			'id'           => 'brand_logo_six',
+			'type'         => 'media',
+			'desc'         => __("Please Input Brand Logo Six","pexr")
+		),
+	)
+
+));
+
 
 
 
