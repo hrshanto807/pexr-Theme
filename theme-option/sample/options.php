@@ -549,7 +549,6 @@ Redux::set_section($opt_name, array(
 		),
 	)
 ));
-
 // advantace area end
 
 // All pexr heading section start
@@ -591,12 +590,267 @@ Redux::set_section($opt_name, array(
 			'id'              =>  'pexr_wedo_heading_title',
 			'type'            => 'text',
 			'title'           => __('We Do Heading Title', 'pexr'),
-			'default'         => __('What We Do?','pexr')
+			'default'         => __('What We Do?', 'pexr')
+		)
+
+	)
+));
+// Why chhose us area heading
+Redux::set_section($opt_name, array(
+	'title'   => 'WHY CHOOSE US section Heading',
+	'desc'    => __('This is choose section heading area', "pexr"),
+	'id'      => 'pexr_choose_heading_area',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'              =>  'pexr_choose_heading_title',
+			'type'            => 'text',
+			'title'           => __('Why choose us Heading Title', 'pexr'),
+			'default'         => __('WHY CHOOSE US?', 'pexr')
 		)
 
 	)
 ));
 // All pexr heading section end
+
+// What we do area bottom start
+Redux::set_section($opt_name, array(
+	'title'   => 'What We Do section Bottom',
+	'desc'    => __('This is We Do section Bottom area', "pexr"),
+	'id'      => 'pexr_wedo_bottom_area',
+
+	'fields'  => array(
+		array(
+			'id'              =>  'pexr_wedo_bottom_content',
+			'type'            => 'textarea',
+			'title'           => __('We Do Bttom Content', 'pexr'),
+			'default'         => __('Powerful Packed Designs Clean and Professional Theme DESIGNED FOR ANY WEBSITE!', 'pexr')
+
+		),
+		array(
+			'id'              =>  'pexr_wedo_bottom_button',
+			'type'            => 'text',
+			'title'           => __('We Do Bttom Button', 'pexr'),
+			'default'         => __('Purchase Now!', 'pexr')
+		),
+		array(
+			'id'              =>  'pexr_wedo_bottom_Button_link',
+			'type'            => 'text',
+			'title'           => __('We Do Bttom Button Link', 'pexr'),
+			'validate'        => 'url'
+
+		),
+
+	)
+));
+//  What we do area bottom end
+
+// advantace area three
+Redux::set_section($opt_name, array(
+	'title'   => 'Why Choose Us Content',
+	'desc'    => __('Input Your Conent Here', "pexr"),
+	'id'      => 'why_choose_us_area',
+));
+// why choose us area one
+Redux::set_section($opt_name, array(
+	'title'   => 'Why Choose Us First Content',
+	'desc'    => __('This is Choose Us Content One', "pexr"),
+	'id'      => 'why_choose-us_one',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'       =>   'choose_us_img_one',
+			'title'    =>  __('Why Choose us One image', 'pexr'),
+			'type'     => 'media',
+			'desc'     =>  __('Please input here image one', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_title_one',
+			'title'    =>  __('Why Choose us One Title', 'pexr'),
+			'type'     => 'text',
+			'desc'     =>  __('Please input here title one', 'pexr'),
+			'default'  => __('10 Diffrent Home Page Layouts', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_content_one',
+			'title'    =>  __('Why Choose us One Content', 'pexr'),
+			'type'     => 'textarea',
+			'desc'     =>  __('Please input here Content one', 'pexr'),
+			'default'  => __('Lorem Ipsum as model will many web sites still over publishing the years.', 'pexr'),
+		),
+	)
+));
+// why choose us area two
+Redux::set_section($opt_name, array(
+	'title'   => 'Why Choose Us Sconed Content',
+	'desc'    => __('This is Choose Us Content two', "pexr"),
+	'id'      => 'why_choose-us_two',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'       =>   'choose_us_img_two',
+			'title'    =>  __('Why Choose us two image', 'pexr'),
+			'type'     => 'media',
+			'desc'     =>  __('Please input here image two', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_title_two',
+			'title'    =>  __('Why Choose us two Title', 'pexr'),
+			'type'     => 'text',
+			'desc'     =>  __('Please input here title two', 'pexr'),
+			'default'  => __('5 Diffrent Header Menu Styles', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_content_two',
+			'title'    =>  __('Why Choose us two Content', 'pexr'),
+			'type'     => 'textarea',
+			'desc'     =>  __('Please input here Content two', 'pexr'),
+			'default'  => __('Lorem Ipsum as model will many web sites still over publishing the years.', 'pexr'),
+		),
+	)
+));
+// why choose us area three
+Redux::set_section($opt_name, array(
+	'title'   => 'Why Choose Us Third Content',
+	'desc'    => __('This is Choose Us Content three', "pexr"),
+	'id'      => 'why_choose-us_three',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'       =>   'choose_us_img_three',
+			'title'    =>  __('Why Choose us three image', 'pexr'),
+			'type'     => 'media',
+			'desc'     =>  __('Please input here image three', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_title_three',
+			'title'    =>  __('Why Choose us three Title', 'pexr'),
+			'type'     => 'text',
+			'desc'     =>  __('Please input here title three', 'pexr'),
+			'default'  => __('Unlimited Useful Shortcodes', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_content_three',
+			'title'    =>  __('Why Choose us three Content', 'pexr'),
+			'type'     => 'textarea',
+			'desc'     =>  __('Please input here Content three', 'pexr'),
+			'default'  => __('Lorem Ipsum as model will many web sites still over publishing the years.', 'pexr'),
+		),
+	)
+));
+// why choose us area four
+Redux::set_section($opt_name, array(
+	'title'   => 'Why Choose Us Fourth Content',
+	'desc'    => __('This is Choose Us Content four', "pexr"),
+	'id'      => 'why_choose_us_four',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'       =>   'choose_us_img_four',
+			'title'    =>  __('Why Choose us four image', 'pexr'),
+			'type'     => 'media',
+			'desc'     =>  __('Please input here image four', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_title_four',
+			'title'    =>  __('Why Choose us four Title', 'pexr'),
+			'type'     => 'text',
+			'desc'     =>  __('Please input here title four', 'pexr'),
+			'default'  => __('Setup any website quick & easy', 'pexr'),
+		),
+		array(
+			'id'       =>   'choose_us_content_four',
+			'title'    =>  __('Why Choose us four Content', 'pexr'),
+			'type'     => 'textarea',
+			'desc'     =>  __('Please input here Content four', 'pexr'),
+			'default'  => __('Lorem Ipsum as model will many web sites still over publishing the years.', 'pexr'),
+		),
+	)
+));
+// Why Choose US  area end
+
+// great features area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('Great Features Section', 'pexr'),
+	'id'               => 'great_features',
+	'fields'           => array(
+		array(
+			'title'              => __('Section Image', 'pexr'),
+			'id'                 => 'great_section_img',
+			'type'               => 'media',
+			'desc'               => __('Please Wright Your Image For great feature', 'pexr'),
+
+		),
+		array(
+			'title'              => __('Section Name', 'pexr'),
+			'id'                 => 'great_section_name',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your name For great feature', 'pexr'),
+			'default'            => __('Great Features', 'pexr')
+		),
+		array(
+			'title'              => __('Section Title', 'pexr'),
+			'id'                 => 'great_section_title',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your Title For great feature', 'pexr'),
+			'default'            => __('Easy-to-customize and fully featured designs', 'pexr')
+		),
+		array(
+			'title'              => __('Section Content', 'pexr'),
+			'id'                 => 'great_section_content',
+			'type'               => 'textarea',
+			'desc'               => __('Please Wright Your content For great feature', 'pexr'),
+			'default'            => __('Theme includes unique designs inside of one powerful theme You can completely change the look and feel of your site in seconds', 'pexr')
+		)
+	)
+));
+
+// great design area start
+Redux::set_section($opt_name, array(
+	'title'            =>  __('Great Design Section', 'pexr'),
+	'id'               => 'great_design',
+	'fields'           => array(
+
+		array(
+			'title'              => __('Section Title', 'pexr'),
+			'id'                 => 'great_design_name',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your Title For great design', 'pexr'),
+			'default'            => __('We Believe Great Design Can Make Great Business ', 'pexr')
+		),
+		array(
+			'title'              => __('Section SubTitle', 'pexr'),
+			'id'                 => 'great_design_title',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your SubTitle For great design', 'pexr'),
+			'default'            => __('Looks Great on Tablets and Mobile Devices', 'pexr')
+		),
+		array(
+			'title'              => __('Section Content', 'pexr'),
+			'id'                 => 'great_design_content',
+			'type'               => 'textarea',
+			'desc'               => __('Please Wright Your content For great design', 'pexr'),
+			'default'            => __('Theme includes unique designs inside of one powerful theme you can completely change the look and feel of your site in seconds', 'pexr')
+		),
+		array(
+			'title'              => __('Section button', 'pexr'),
+			'id'                 => 'great_design_button',
+			'type'               => 'text',
+			'desc'               => __('Please Wright Your button name', 'pexr'),
+			'default'            => __('Purchase Now!', 'pexr')
+		),
+		array(
+			'title'              => __('Section Button Link', 'pexr'),
+			'id'                 => 'great_design_button_link',
+			'type'               => 'text',
+			'desc'               => __('Inter Your Link For This Button', 'pexr'),
+
+		)
+	)
+));
+
+
+
 
 
 

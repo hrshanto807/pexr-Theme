@@ -244,8 +244,8 @@
             <div class="col-md-4 icon-plain-small iconbox-xtiny border-all-opacity6 border-radius-1 nopadding"><i class="<?php if(!empty($servie_meta)){echo esc_attr($servie_meta);};?> margin-top-1 text-white" aria-hidden="true"></i></div>
             <div class="col-md-8 nopadding">
               <div class="clearfix margin-bottom-respo"></div>
-              <h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2"><?php the_title();?></h5>
-              <p class="text-white margin-left-2 opacity-6">Many web sites still in infancy versions have evolved over the alteration middle years.</p>
+              <a href="<?php the_permalink();?>"><h5 class="uppercase text-white font-weight-7 margin-bottom-1 margin-top-minus-6 margin-left-2"><?php the_title();?></h5></a>
+              <p class="text-white margin-left-2 opacity-6"><?php echo wp_trim_words(get_the_content(),14,NULL)?></p>
             </div>
           </div>          
         </div><!-- end col -->
@@ -264,11 +264,11 @@
     <div class="row nopadding">
 
       <div class="col-md-9 margin-bottom">
-        <h3 class="text-white font-weight-7">Powerful Packed Designs Clean and Professional Theme DESIGNED FOR ANY WEBSITE!</h3>
+        <h3 class="text-white font-weight-7"><?php if(!empty($pexr['pexr_wedo_bottom_content'])){echo esc_html($pexr['pexr_wedo_bottom_content']);};?></h3>
       </div><!-- end col -->
 
       <div class="col-md-3">
-        <div class="margin-top-percent-1"><a href="#" class="sitebutton-1 sty5 roboto font-weight-7 uppercase">Purchase Now!</a></div>
+        <div class="margin-top-percent-1"><a href="<?php if(!empty($pexr['pexr_wedo_bottom_button_link'])){echo esc_url($pexr['pexr_wedo_bottom_button_link']);};?>" class="sitebutton-1 sty5 roboto font-weight-7 uppercase"><?php if(!empty($pexr['pexr_wedo_bottom_button'])){echo esc_html($pexr['pexr_wedo_bottom_button']);};?></a></div>
       </div><!-- end col -->
 
     </div>
@@ -281,37 +281,54 @@
   <div class="container">
     <div class="row">
 
-      <h2 class="uppercase font-weight-8 margin-bottom-4">Why Choose Us?</h2>
+      <h2 class="uppercase font-weight-8 margin-bottom-4"><?php if(!empty($pexr['pexr_choose_heading_title'])){
+        echo esc_html($pexr['pexr_choose_heading_title']);
+      };?></h2>
 
       <div class="col-md-3 col-sm-6 margin-bottom">
         <div class="section-white box-shadow-2 hover-shadow-2 padding-top-4 padding-left-4 padding-right-4 padding-bottom-3">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/ft-icon-primary-1.png" alt="" class="img-responsive-5 margin-bottom-2" />
-          <h6 class="uppercase font-weight-5 margin-bottom2">10 Diffrent Home Page Layouts</h6>
-          <p>Lorem Ipsum as model will many web sites still over publishing the years.</p>
+          <img src="<?php if(!empty($pexr['choose_us_img_one'])){echo esc_url($pexr['choose_us_img_one']['url']);};?>" alt="" class="img-responsive-5 margin-bottom-2" />
+          <h6 class="uppercase font-weight-5 margin-bottom2"><?php if(!empty($pexr['choose_us_title_one'])){
+            echo esc_html($pexr['choose_us_title_one']);
+          };?></h6>
+          <p><?php if(!empty($pexr['choose_us_content_one'])){
+            echo esc_html($pexr['choose_us_content_one']);
+          };?></p>
         </div>
       </div><!-- end col -->
 
       <div class="col-md-3 col-sm-6 margin-bottom">
         <div class="section-white box-shadow-2 hover-shadow-2 padding-top-4 padding-left-4 padding-right-4 padding-bottom-3">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/ft-icon-primary-2.png" alt="" class="img-responsive-5 margin-bottom-2" />
-          <h6 class="uppercase font-weight-5 margin-bottom2">5 Diffrent Header Menu Styles</h6>
-          <p>Lorem Ipsum as model will many web sites still over publishing the years.</p>
+          <img src="<?php if(!empty($pexr['choose_us_img_two'])){echo esc_url($pexr['choose_us_img_two']['url']);};?>" alt="" class="img-responsive-5 margin-bottom-2" />
+          <h6 class="uppercase font-weight-5 margin-bottom2"><?php if(!empty($pexr['choose_us_title_two'])){
+            echo esc_html($pexr['choose_us_title_two']);
+          };?></h6>
+          <p><?php if(!empty($pexr['choose_us_content_two'])){
+            echo esc_html($pexr['choose_us_content_two']);
+          };?></p>
         </div>
       </div><!-- end col -->
 
       <div class="col-md-3 col-sm-6">
         <div class="section-white box-shadow-2 hover-shadow-2 padding-top-4 padding-left-4 padding-right-4 padding-bottom-3">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/ft-icon-primary-3.png" alt="" class="img-responsive-5 margin-bottom-2" />
-          <h6 class="uppercase font-weight-5 margin-bottom2">Unlimited Useful Shortcodes</h6>
-          <p>Lorem Ipsum as model will many web sites still over publishing the years.</p>
+          <img src="<?php if(!empty($pexr['choose_us_img_three'])){echo esc_url($pexr['choose_us_img_three']['url']);};?>" alt="" class="img-responsive-5 margin-bottom-2" />
+          <h6 class="uppercase font-weight-5 margin-bottom2"><?php if(!empty($pexr['choose_us_title_three'])){
+            echo esc_html($pexr['choose_us_title_three']);
+          };?></h6>
+          <p><?php if(!empty($pexr['choose_us_content_three'])){
+            echo esc_html($pexr['choose_us_content_three']);
+          };?></p>
         </div>
       </div><!-- end col -->
 
       <div class="col-md-3 col-sm-6">
         <div class="section-white box-shadow-2 hover-shadow-2 padding-top-4 padding-left-4 padding-right-4 padding-bottom-3">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/ft-icon-primary-4.png" alt="" class="img-responsive-5 margin-bottom-2" />
-          <h6 class="uppercase font-weight-5 margin-bottom2">Setup any website quick & easy</h6>
-          <p>Lorem Ipsum as model will many web sites still over publishing the years.</p>
+          <img src="<?php if(!empty($pexr['choose_us_img_four'])){echo esc_url($pexr['choose_us_img_four']['url']);};?>" alt="" class="img-responsive-5 margin-bottom-2" />
+          <h6 class="uppercase font-weight-5 margin-bottom2"><?php if(!empty($pexr['choose_us_title_four'])){
+            echo esc_html($pexr['choose_us_title_four']);
+          };?></h6>
+          <p><?php if(!empty($pexr['choose_us_content_four'])){echo esc_html($pexr['choose_us_content_four']);
+          };?></p>
         </div>
       </div><!-- end col -->
 
@@ -325,13 +342,21 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-5 animate-in" data-anim-type="fade-in-left" data-anim-delay="100"><img src="<?php echo get_template_directory_uri(); ?>/images/mobi-site.jpg" alt="" class="img-responsive" /></div><!-- end col -->
+      <div class="col-md-5 animate-in" data-anim-type="fade-in-left" data-anim-delay="100"><img src="<?php if(!empty($pexr['great_section_img'])){
+            echo esc_url($pexr['great_section_img']['url']);
+          };?>" alt="" class="img-responsive" /></div><!-- end col -->
 
       <div class="col-md-7 margin-bottom">
         <div class="less5">
-          <h2 class="uppercase font-weight-7 margin-top-percent-1 nomargin">Great Features</h2>
-          <h5 class="font-weight-3 margin-bottom-2">Easy-to-customize and fully featured designs</h5>
-          <p class="margin-bottom-3">Theme includes unique designs inside of one powerful theme You can completely change the look and feel of your site in seconds</p>
+          <h2 class="uppercase font-weight-7 margin-top-percent-1 nomargin"><?php if(!empty($pexr['great_section_name'])){
+            echo esc_html($pexr['great_section_name']);
+          };?></h2>
+          <h5 class="font-weight-3 margin-bottom-2"><?php if(!empty($pexr['great_section_title'])){
+            echo esc_html($pexr['great_section_title']);
+          };?></h5>
+          <p class="margin-bottom-3"><?php if(!empty($pexr['great_section_content'])){
+            echo esc_html($pexr['great_section_content']);
+          };?></p>
 
           <div class="col-md-6 nopadding">
             <div class="icons-list-1 icon-tiny">
@@ -415,28 +440,20 @@
 <section class="sec-padding sec-bgimg-1">
   <div class="container">
     <div class="row">
+      <?php $blog_post = new WP_Query(array( 
+        'post_type'    => 'post',
+        'posts_per_page'=> 3,        
+      ));
+      if($blog_post->have_posts()):while ($blog_post->have_posts()):$blog_post->the_post();
+      ?>
 
       <div class="col-md-4 margin-bottom">
-        <h4 class="text-white font-weight-4 margin-bottom2">Alteration handful of model many sentence structures</h4>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/site-img-27.jpg" alt="" class="img-responsive" />
-        <p class="text-gray-2 margin-top-2">Lorem Ipsum as their default model the and a search for lorem ipsum will uncover many web sites the stilin infancy versions have evolved over the years.</p>
-        <a href="#" class="opacity-white"><strong class="text-small uppercase"><i class="fa fa-caret-right" aria-hidden="true"></i> Read More</strong></a>
+        <a href="<?php the_permalink();?>"><h4 class="text-white font-weight-4 margin-bottom2"><?php the_title();?></h4></a>
+         <?php the_post_thumbnail('pexr_blog_thumb');?>
+        <p class="text-gray-2 margin-top-2"><?php echo wp_trim_words(get_the_content(),25,' </br><a href="' .  get_the_permalink() . '"class="opacity-white"><strong class="text-small uppercase"><i class="fa fa-caret-right" aria-hidden="true"></i> Read More</strong></a>');?></p>
+        
       </div><!-- end col -->
-
-      <div class="col-md-4 margin-bottom">
-        <h4 class="text-white font-weight-4 margin-bottom2">Various versions have evolved over the years</h4>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/site-img-26.jpg" alt="" class="img-responsive" />
-        <p class="text-gray-2 margin-top-2">Lorem Ipsum as their default model the and a search for lorem ipsum will uncover many web sites the stilin infancy versions have evolved over the years.</p>
-        <a href="#" class="opacity-white"><strong class="text-small uppercase"><i class="fa fa-caret-right" aria-hidden="true"></i> Read More</strong></a>
-      </div><!-- end col -->
-
-      <div class="col-md-4">
-        <h4 class="text-white font-weight-4 margin-bottom2">Making this the first generator on the therefore Internet</h4>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/site-img-25.jpg" alt="" class="img-responsive" />
-        <p class="text-gray-2 margin-top-2">Lorem Ipsum as their default model the and a search for lorem ipsum will uncover many web sites the stilin infancy versions have evolved over the years.</p>
-        <a href="#" class="opacity-white"><strong class="text-small uppercase"><i class="fa fa-caret-right" aria-hidden="true"></i> Read More</strong></a>
-      </div><!-- end col -->
-
+      <?php endwhile;endif;?>
     </div>
   </div>
 </section>
@@ -446,90 +463,24 @@
 <section class="sec-padding text-center">
   <div class="container">
     <div class="row">
-
+    
+    <?php $branding_design = new WP_Query(array( 
+      'post_type'       => 'pexr-branding-design',
+      'posts_per_page'  => 8,
+    ));if($branding_design->have_posts()):while($branding_design->have_posts()):$branding_design->the_post();
+    $branding_design_meta_icon = get_post_meta(get_the_ID(),'branding_design_meta_faicon',true)?>
       <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="100">
+     
         <div class="margin-bottom">
-          <span class="icon-lightbulb icon-plain-smedium margin-bottom-2 text-primary"></span>
+          <span class="<?php if(!empty($branding_design_meta_icon)){echo esc_attr($branding_design_meta_icon);};?> icon-plain-smedium margin-bottom-2 text-primary"></span>
           <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Branding Design</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
+          <h5 class="uppercase font-weight-7 title"><?php the_title();?></h5>
+          <p class="less5"><?php echo wp_trim_words(get_the_content(),30, NULL)?></p>
         </div>
+        <div class="clearfix margin-bottom-4"></div>
       </div>
       <!--end item-->
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="200">
-        <div class="margin-bottom">
-          <span class="icon-camera icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Photography</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="300">
-        <div class="margin-bottom">
-          <span class="icon-trophy icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Event Design</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="400">
-        <div class="margin-bottom">
-          <span class="icon-tools icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Fashions</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-      <div class="clearfix margin-bottom-4"></div>
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="500">
-        <div class="margin-bottom">
-          <span class="icon-global icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Marketing</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="600">
-        <div class="margin-bottom">
-          <span class="icon-chat icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Great Support</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="700">
-        <div class="margin-bottom">
-          <span class="icon-global icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Marketing</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-      <div class="col-md-3 col-sm-6 hover-icon-up animate-in" data-anim-type="zoom-in" data-anim-delay="800">
-        <div>
-          <span class="icon-chat icon-plain-smedium margin-bottom-2 text-primary"></span>
-          <div class="clearfix margin-bottom-8"></div>
-          <h5 class="uppercase font-weight-7 title">Great Support</h5>
-          <p class="less5">Lorem ipsum dolor sit amet consectetuer adipiscing sitet justo lorem pendisse</p>
-        </div>
-      </div>
-      <!--end item-->
-
-
+      <?php  endwhile;endif;?>
     </div>
   </div>
 </section>
@@ -542,9 +493,9 @@
       <div class="row">
 
         <div class="col-md-6 text-center">
-          <h1 class="font-weight-7 margin-bottom-2">We Believe Great Design Can Make Great Business <br /><strong class="font-weight-3">Looks Great on Tablets and Mobile Devices</strong></h1>
-          <h5 class="font-weight-3 line-height-3 margin-bottom-6">Theme includes unique designs inside of one powerful theme you can completely change the look and feel of your site in seconds</h5>
-          <a href="#" class="sitebutton-1 sty5 roboto font-weight-7 uppercase">Purchase Now!</a>
+          <h1 class="font-weight-7 margin-bottom-2"><?php if(!empty($pexr['great_design_name'])){echo esc_html($pexr['great_design_name']);};?> <br /><strong class="font-weight-3"><?php if(!empty($pexr['great_design_title'])){echo esc_html($pexr['great_design_title']);};?></strong></h1>
+          <h5 class="font-weight-3 line-height-3 margin-bottom-6"><?php if(!empty($pexr['great_design_content'])){echo esc_html($pexr['great_design_content']);};?></h5>
+          <a href="<?php if(!empty($pexr['great_design_button_link'])){echo esc_url($pexr['great_design_button_link']);};?>" class="sitebutton-1 sty5 roboto font-weight-7 uppercase"><?php if(!empty($pexr['great_design_button'])){echo esc_html($pexr['great_design_button']);};?></a>
         </div>
 
       </div>
@@ -557,64 +508,23 @@
 <section class="sec-padding section-dark">
   <div class="container">
     <div class="row">
-
+      <?php $support = new WP_Query(array( 
+        'post_type' => 'pexr-support',
+        'posts_per_page' => 3,
+      ));
+      if( $support->have_posts()):while( $support->have_posts()): $support->the_post();
+      $support_meta_icon = get_post_meta(get_the_ID(),'support_meta_faicon',true)?>
       <div class="col-md-4 margin-bottom">
-        <div class="icon-plain-msmall left animate-in" data-anim-type="zoom-in" data-anim-delay="100"><br /><i class="fa fa-leaf text-white" aria-hidden="true"></i></div>
+        <div class="icon-plain-msmall left animate-in" data-anim-type="zoom-in" data-anim-delay="100"><br /><i class="<?php if(!empty($support_meta_icon)){
+          echo esc_attr($support_meta_icon);
+        };?> text-white" aria-hidden="true"></i></div>
         <div class="text-box-right less-padding-5 resnopad">
-          <h5 class="text-white font-weight-7 uppercase less-mar-2">Bootstrap support</h5>
-          <p class="text-white opacity-5">Lorem ipsum dolor sit amet consectetuer adipiscing elit sit elit Suspendisse et justo Praesent mattis commodo.</p>
+          <h5 class="text-white font-weight-7 uppercase less-mar-2"><?php the_title();?></h5>
+          <p class="text-white opacity-5"><?php echo wp_trim_words(get_the_content(),15,NULL)?></p>
         </div>
       </div>
       <!--end item -->
-
-      <div class="col-md-4 margin-bottom">
-        <div class="icon-plain-small left animate-in" data-anim-type="zoom-in" data-anim-delay="150"><br /><i class="fa fa-mobile text-white" aria-hidden="true"></i></div>
-        <div class="text-box-right less-padding-5 resnopad">
-          <h5 class="text-white font-weight-7 uppercase less-mar-2">Responsive Theme</h5>
-          <p class="text-white opacity-5">Lorem ipsum dolor sit amet consectetuer adipiscing elit sit elit Suspendisse et justo Praesent mattis commodo.</p>
-        </div>
-      </div>
-      <!--end item -->
-
-      <div class="col-md-4 margin-bottom">
-        <div class="icon-plain-msmall left animate-in" data-anim-type="zoom-in" data-anim-delay="200"><br /><i class="fa fa-magic text-white" aria-hidden="true"></i></div>
-        <div class="text-box-right less-padding-5 resnopad">
-          <h5 class="text-white font-weight-7 uppercase less-mar-2">Beautiful Website</h5>
-          <p class="text-white opacity-5">Lorem ipsum dolor sit amet consectetuer adipiscing elit sit elit Suspendisse et justo Praesent mattis commodo.</p>
-        </div>
-      </div>
-      <!--end item -->
-
-      <div class="clearfix"></div>
-      <div class="col-divider-margin-4"></div>
-
-      <div class="col-md-4 margin-bottom">
-        <div class="icon-plain-msmall left animate-in" data-anim-type="zoom-in" data-anim-delay="250"><br /><i class="fa fa-heart-o text-white" aria-hidden="true"></i></div>
-        <div class="text-box-right less-padding-5 resnopad">
-          <h5 class="text-white font-weight-7 uppercase less-mar-2">Portfolio of works</h5>
-          <p class="text-white opacity-5">Lorem ipsum dolor sit amet consectetuer adipiscing elit sit elit Suspendisse et justo Praesent mattis commodo.</p>
-        </div>
-      </div>
-      <!--end item -->
-
-      <div class="col-md-4 margin-bottom">
-        <div class="icon-plain-msmall left animate-in" data-anim-type="zoom-in" data-anim-delay="300"><br /><i class="fa fa-share-alt text-white" aria-hidden="true"></i></div>
-        <div class="text-box-right less-padding-5 resnopad">
-          <h5 class="text-white font-weight-7 uppercase less-mar-2">Share your passion</h5>
-          <p class="text-white opacity-5">Lorem ipsum dolor sit amet consectetuer adipiscing elit sit elit Suspendisse et justo Praesent mattis commodo.</p>
-        </div>
-      </div>
-      <!--end item -->
-
-      <div class="col-md-4 margin-bottom">
-        <div class="icon-plain-small left animate-in" data-anim-type="zoom-in" data-anim-delay="350"><br /><i class="fa fa-lightbulb-o text-white" aria-hidden="true"></i></div>
-        <div class="text-box-right less-padding-5 resnopad">
-          <h5 class="text-white font-weight-7 uppercase less-mar-2">What are you waiting</h5>
-          <p class="text-white opacity-5">Lorem ipsum dolor sit amet consectetuer adipiscing elit sit elit Suspendisse et justo Praesent mattis commodo.</p>
-        </div>
-      </div>
-      <!--end item -->
-
+      <?php endwhile;endif;?>
     </div>
   </div>
 </section>

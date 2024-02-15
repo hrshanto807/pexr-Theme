@@ -59,6 +59,52 @@ function pexr_custom_post_type()
         'supports'     =>  array('title', 'editor'),
 
     ));
+      // Register CPT branding design
+
+      register_post_type('pexr-branding-design', array(
+        'labels'     => array(
+            'name'             => esc_html(__('Branding Design', 'pexr')),
+            'singular_name'    => esc_html(__('Design', 'pexr')),
+            'add_new'          => esc_html(__('Add New Design', 'pexr')),
+            'not_found'        => esc_html(__('not Design found', 'pexr')),
+            'add_new_item'     => esc_html(__('Add New Designt', 'pexr')),
+            'edit_item'        => esc_html(__('Edit Design', 'pexr')),
+
+
+        ),
+        'public'     => true,
+        'rewrite'    => array(
+            'slug'               => 'branding_design'
+        ),
+        'menu_icon'  =>  'dashicons-heart',
+        'capability_type' => 'page',
+        'supports'     =>  array('title','editor'),
+
+    ));
+
+     // Register CPT Support 
+
+     register_post_type('pexr-support', array(
+        'labels'     => array(
+            'name'             => esc_html(__('Supports', 'pexr')),
+            'singular_name'    => esc_html(__('Support', 'pexr')),
+            'add_new'          => esc_html(__('Add New Support', 'pexr')),
+            'not_found'        => esc_html(__('not Support found', 'pexr')),
+            'add_new_item'     => esc_html(__('Add New Support', 'pexr')),
+            'edit_item'        => esc_html(__('Edit Support', 'pexr')),
+
+
+        ),
+        'public'     => true,
+        'rewrite'    => array(
+            'slug'               => 'support'
+        ),
+        'menu_icon'  =>  'dashicons-rest-api',
+        'capability_type' => 'page',
+        'supports'     =>  array('title','editor'),
+
+    ));
+   
 
 };
 
