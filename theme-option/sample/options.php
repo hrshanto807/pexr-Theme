@@ -650,6 +650,21 @@ Redux::set_section($opt_name, array(
 
 	)
 ));
+// Our Team area heading
+Redux::set_section($opt_name, array(
+	'title'   => 'Our Team section Heading',
+	'desc'    => __('This is Our Team section heading area', "pexr"),
+	'id'      => 'pexr_team_heading_area',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'              =>  'pexr_team_heading_title',
+			'type'            => 'text',
+			'title'           => __('Our Team Heading Title', 'pexr'),
+			'default'         => __('Meet Our Team', 'pexr')
+		),		
+	)
+));
 // All pexr heading section end
 
 // What we do area bottom start

@@ -59,9 +59,9 @@ function pexr_custom_post_type()
         'supports'     =>  array('title', 'editor'),
 
     ));
-      // Register CPT branding design
+    // Register CPT branding design
 
-      register_post_type('pexr-branding-design', array(
+    register_post_type('pexr-branding-design', array(
         'labels'     => array(
             'name'             => esc_html(__('Branding Design', 'pexr')),
             'singular_name'    => esc_html(__('Design', 'pexr')),
@@ -78,13 +78,13 @@ function pexr_custom_post_type()
         ),
         'menu_icon'  =>  'dashicons-heart',
         'capability_type' => 'page',
-        'supports'     =>  array('title','editor'),
+        'supports'     =>  array('title', 'editor'),
 
     ));
 
-     // Register CPT Support 
+    // Register CPT Support 
 
-     register_post_type('pexr-support', array(
+    register_post_type('pexr-support', array(
         'labels'     => array(
             'name'             => esc_html(__('Supports', 'pexr')),
             'singular_name'    => esc_html(__('Support', 'pexr')),
@@ -101,7 +101,7 @@ function pexr_custom_post_type()
         ),
         'menu_icon'  =>  'dashicons-rest-api',
         'capability_type' => 'page',
-        'supports'     =>  array('title','editor'),
+        'supports'     =>  array('title', 'editor'),
 
     ));
 
@@ -123,13 +123,56 @@ function pexr_custom_post_type()
         'public'     => true,
         'rewrite'    => array(
             'slug'               => 'our-services'
-        ),       
+        ),
         'capability_type' => 'page',
         'supports'     =>  array('title', 'editor'),
 
     ));
-   
 
+    // Register CPT Teams
+    register_post_type('pexr_teams', array(
+        'labels'  =>  array(
+            'name'             => esc_html(__('Team', 'pexr')),
+            'singular_name'    => esc_html(__('Team', 'pexr')),
+            'add_new'          => esc_html(__('Add New Team', 'pexr')),
+            'not_found'        => esc_html(__('not found Team', 'pexr')),
+            'edit_item'        => esc_html(__('Edit Team', 'pexr')),
+            'add_new_item'     => esc_html(__('Add New Team', 'pexr')),
+            'featured_image'   => esc_html(__('Team Member Image', 'pexr')),
+            'set_featured_image' => esc_html(__('Set Team Member Image', 'pexr')),
+            'remove_featured_image' => esc_html(__('Remove Team Member Image', 'pexr')),
+        ),
+        'menu_icon'      => 'dashicons-groups',
+        'rewrite'        => array(
+            'slug'             => 'team'
+        ),
+        'capability_type' => 'page',
+        'public'         => true,
+        'supports'   => array('title', 'editor', 'thumbnail')
+    ));
+    // Register CPT Testimonial
+    register_post_type('pexr-testimonial', array(
+        'labels'          => array(
+            'name'             => esc_html(__('Testimonals', 'pexr')),
+            'singular_name'    => esc_html(__('testimonial', 'pexr')),
+            'add_new'          => esc_html(__('Add New Testimonial', 'pexr')),
+            'not_found'        => esc_html(__('not found testimonial', 'pexr')),
+            'edit_item'        => esc_html(__('Edit Testimonial', 'pexr')),
+            'add_new_item'     => esc_html(__('Add New testimonial', 'pexr')),
+            'featured_image'   => esc_html(__('Client Image', 'pexr')),
+            'set_featured_image' => esc_html(__('Set Client Image', 'pexr')),
+            'remove_featured_image' => esc_html(__('Remove Client Image', 'pexr')),
+
+        ),
+        'menu_icon'      => 'dashicons-slides',
+        'rewrite'        => array(
+            'slug'             => 'testimonail'
+        ),
+        'capability_type' => 'page',
+        'public'         => true,
+        'supports'   => array('title', 'editor', 'thumbnail')
+
+    ));
 };
 
 

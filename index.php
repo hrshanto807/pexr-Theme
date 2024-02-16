@@ -965,41 +965,23 @@
   <div class="container">
     <div class="row">
 
-      <h2 class="uppercase font-weight-8 margin-bottom-4">Meet Our Team</h2>
+      <h2 class="uppercase font-weight-8 margin-bottom-4"><?php if(!empty($pexr['pexr_team_heading_title'])){echo esc_html($pexr['pexr_team_heading_title']);};?></h2>
+      <?php $pexr_team = new WP_Query(array( 
+        'post_type'     => 'pexr_teams',
+        'posts_per_page'=> 4,
+      ));
+      if($pexr_team->have_posts()):while($pexr_team->have_posts()):$pexr_team->the_post();?>
 
       <div class="col-md-3 col-sm-6 margin-bottom animate-in" data-anim-type="fade-in" data-anim-delay="100">
         <div class="box-shadow-2 padding-top-4 padding-left-5 padding-right-5 padding-bottom-3 hover-shadow-2">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/people-img42.jpg" alt="" class="circle12 margin-bottom-2" />
-          <h5 class="font-weight-6 uppercase margin-bottom-1">Alex Jacob</h5>
-          <p>Lorem Ipsum as model will uncover many web sites over the years.</p>
+          <?php the_post_thumbnail('pexr_team_thumb',array( 
+                 'class'      =>  'circle12 margin-bottom-2'
+          ))?>
+          <h5 class="font-weight-6 uppercase margin-bottom-1"><?php the_title();?></h5>
+          <p><?php echo wp_trim_words(get_the_content(),12,NULL)?></p>
         </div>
       </div><!-- end col -->
-
-      <div class="col-md-3 col-sm-6 margin-bottom animate-in" data-anim-type="fade-in" data-anim-delay="200">
-        <div class="box-shadow-2 padding-top-4 padding-left-5 padding-right-5 padding-bottom-3 hover-shadow-2">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/people-img43.jpg" alt="" class="circle12 margin-bottom-2" />
-          <h5 class="font-weight-6 uppercase margin-bottom-1">Alana Desra</h5>
-          <p>Lorem Ipsum as model will uncover many web sites over the years.</p>
-        </div>
-      </div><!-- end col -->
-
-      <div class="col-md-3 col-sm-6 margin-bottom animate-in" data-anim-type="fade-in" data-anim-delay="300">
-        <div class="box-shadow-2 padding-top-4 padding-left-5 padding-right-5 padding-bottom-3 hover-shadow-2">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/people-img47.jpg" alt="" class="circle12 margin-bottom-2" />
-          <h5 class="font-weight-6 uppercase margin-bottom-1">Mark Heribo</h5>
-          <p>Lorem Ipsum as model will uncover many web sites over the years.</p>
-        </div>
-      </div><!-- end col -->
-
-      <div class="col-md-3 col-sm-6 animate-in" data-anim-type="fade-in" data-anim-delay="400">
-        <div class="box-shadow-2 padding-top-4 padding-left-5 padding-right-5 padding-bottom-3 hover-shadow-2">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/people-img48.jpg" alt="" class="circle12 margin-bottom-2" />
-          <h5 class="font-weight-6 uppercase margin-bottom-1">Kiley Felicity</h5>
-          <p>Lorem Ipsum as model will uncover many web sites over the years.</p>
-        </div>
-      </div><!-- end col -->
-
-
+      <?php endwhile;endif;?>
     </div>
   </div>
 </section>
@@ -1115,147 +1097,35 @@
           <div id="owl-demo3-1" class="owl-carousel owl-theme">
 
             <div class="item padding-top-2">
+              <?php $pexr_testimonials = new WP_Query(array( 
+                'post_type'    => 'pexr-testimonial',
+                'posts_per_page'=> 3,
+              ));if($pexr_testimonials->have_posts()) : while($pexr_testimonials->have_posts()) : $pexr_testimonials->the_post();
+              $meta_image_client = get_post_meta(get_the_ID(), 'testimonail_img', true);
+              $meta_name_client = get_post_meta(get_the_ID(), 'testimonail_name_title', true);
+              $meta_website_client = get_post_meta(get_the_ID(), 'testimonail_website_name', true);
+              ?>
 
               <div class="col-md-4 col-sm-4 animate-in" data-anim-type="zoom-in" data-anim-delay="100">
                 <div class="margin-bottom">
                   <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2 margin-bottom">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Wow, Done Very Fast!</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small1.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Marison Avasa</h6>
-                      <i class="text-small">Website.com</i>
+                    <h5 class="text-primary font-weight-7 margin-bottom-1"><?php the_title();?></h5>
+                    <p class="margin-bottom-2"><?php echo wp_trim_words(get_the_content(),10,NULL)?></p>
+                    <div class="above-arrow-line"><img src="<?php if(!empty($meta_image_client)){
+                      echo esc_html($meta_image_client);
+                    };?>" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
+                      <h6 class="small-text nomargin font-weight-5"><?php if(!empty($meta_name_client)){
+                        echo esc_html($meta_name_client);
+                      };?></h6>
+                      <i class="text-small"><?php if(!empty($meta_website_client)){
+                        echo esc_html($meta_website_client);
+                      };?></i>
                     </div>
                   </div>
                 </div>
               </div>
               <!--end item-->
-
-              <div class="col-md-4 col-sm-4 animate-in" data-anim-type="zoom-in" data-anim-delay="200">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2 margin-bottom">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Highly Recommended</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small2.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Joan Collins</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-              <div class="col-md-4 col-sm-4 animate-in" data-anim-type="zoom-in" data-anim-delay="300">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Done, Exactly as We Like</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small3.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Melinda Liza</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-              <div class="clearfix margin-bottom-3"></div>
-            </div>
-            <!--end carousel item-->
-
-
-            <div class="item padding-top-2">
-
-              <div class="col-md-4 col-sm-4">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2 margin-bottom">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Great Knowledge</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small4.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Ayanna Darya</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-              <div class="col-md-4 col-sm-4">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2 margin-bottom">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Will Hire Again</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small5.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Frymcia Lisa</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-              <div class="col-md-4 col-sm-4">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Excellent Work</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small1.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Natasha Arana</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-
-              <div class="clearfix margin-bottom-3"></div>
-            </div>
-            <!--end carousel item-->
-
-            <div class="item padding-top-2">
-
-              <div class="col-md-4 col-sm-4">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2 margin-bottom">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Really Good Service</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small7.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Enadria Lisa</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-              <div class="col-md-4 col-sm-4">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2 margin-bottom">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">Web UI Design</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small8.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Dean Ambrose</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
-              <div class="col-md-4 col-sm-4">
-                <div class="margin-bottom">
-                  <div class="text-box section-white padding-top-3 padding-bottom-4 padding-left-4 padding-right-4 border-radius-1 box-shadow-2">
-                    <h5 class="text-primary font-weight-7 margin-bottom-1">High Quality Website</h5>
-                    <p class="margin-bottom-2">We need sure generate internet predefine repeat the centuries one the release.</p>
-                    <div class="above-arrow-line"><img src="<?php echo get_template_directory_uri(); ?>/images/people-img-small9.jpg" alt="" class="imgbox-xtiny2 round float-left margin-top-1 margin-right-3" />
-                      <h6 class="small-text nomargin font-weight-5">Larissa Melina</h6>
-                      <i class="text-small">Website.com</i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--end item-->
-
+              <?php  endwhile; endif;?>
               <div class="clearfix margin-bottom-3"></div>
             </div>
             <!--end carousel item-->
