@@ -69,3 +69,26 @@ function support_post_fileds()
     ) );
 }
 add_action('cmb2_admin_init', 'support_post_fileds');
+// Our Services area meta field
+function our_service_post_fileds()
+{
+    $our_service_post = new_cmb2_box(array(
+        'id' => 'meta_our_service_icon',
+        'title' => esc_html(__('Services Icon', 'pexr')),
+        'object_types'  => array('pexr-our-services'),
+
+
+    ));
+
+    $our_service_post->add_field( array(
+        'name' => __( 'Select Services Icon', 'pexr' ),
+        'id'   => 'our_service_meta_faicon',
+        'desc' => 'Select Font Awesome icon',
+        'type' => 'faiconselect',
+        'options_cb' => 'returnRayFapsa',
+        'attributes' => array(
+            'faver' => 5
+        )
+    ) );
+}
+add_action('cmb2_admin_init', 'our_service_post_fileds');

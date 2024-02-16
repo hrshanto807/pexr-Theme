@@ -925,70 +925,31 @@
     <div class="row nopadding">
 
       <div class="col-md-12 text-center">
-        <h2 class="uppercase text-white font-weight-8 margin-bottom-1 text-center">Our Serivices</h2>
-        <h6 class="text-gray-2 font-weight-3 margin-bottom-2">We have the experience and the knowledge to get your vision comes true</h6>
+        <h2 class="uppercase text-white font-weight-8 margin-bottom-1 text-center"><?php if(!empty($pexr['pexr_our_services_heading_title'])){echo esc_html($pexr['pexr_our_services_heading_title']);};?></h2>
+        <h6 class="text-gray-2 font-weight-3 margin-bottom-2"><?php if(!empty($pexr['pexr_our_services_heading_content'])){echo esc_html($pexr['pexr_our_services_heading_content']);};?></h6>
       </div>
 
       <div class="clearfix margin-bottom-1"></div>
 
       <div class="col-md-12 slide-controls-5 nopadding">
         <div id="owl-demo5" class="owl-carousel">
+          <?php $our_services = new WP_Query(array( 
+            'post_type'   => 'pexr-our-services',
+            'posts_per_page'=> 7,
+          ));
+          if($our_services->have_posts()):while($our_services->have_posts()):$our_services->the_post();
+          $our_service_meta = get_post_meta(get_the_ID(),'our_service_meta_faicon',true)?>
 
           <div class="item">
             <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-file-image-o text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Pre Designed Layouts</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
+              <div class="icon-plain-small margin-bottom-2"><i class="<?php if(!empty($our_service_meta)){
+              echo esc_attr($our_service_meta);}?> text-primary" aria-hidden="true"></i></div>
+              <h5 class="font-weight-7 uppercase margin-bottom-1"><?php the_title();?></h5>
+              <p class="text-gray"><?php echo wp_trim_words(get_the_content(),17,NULL)?></p>
             </div>
           </div><!--end item-->
-
-          <div class="item">
-            <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-film text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Exclusive Slideshows</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
-            </div>
-          </div><!--end item-->
-
-          <div class="item">
-            <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-tablet text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Mobile Friendly Theme</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
-            </div>
-          </div><!--end item-->
-
-          <div class="item">
-            <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-globe text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Cross Browsere Check</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
-            </div>
-          </div><!--end item-->
-
-          <div class="item">
-            <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-lightbulb-o text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Creative Business Thinking</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
-            </div>
-          </div><!--end item-->
-
-          <div class="item">
-            <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-bell-o text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Improve Your Business</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
-            </div>
-          </div><!--end item-->
-
-          <div class="item">
-            <div class="text-box section-white padding-percent-1 text-center border-radius-1">
-              <div class="icon-plain-small margin-bottom-2"><i class="fa fa-files-o text-primary" aria-hidden="true"></i></div>
-              <h5 class="font-weight-7 uppercase margin-bottom-1">Well Structured Pages</h5>
-              <p class="text-gray">We need sure generate the trne repeat predefine the centuries one the release which looks the reasonable</p>
-            </div>
-          </div><!--end item-->
+        <?php endwhile;endif;?>
+         
 
         </div>
       </div>

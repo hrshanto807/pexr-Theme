@@ -104,6 +104,30 @@ function pexr_custom_post_type()
         'supports'     =>  array('title','editor'),
 
     ));
+
+    // register  Our Sevices CPT
+    register_post_type('pexr-our-services', array(
+        'labels'     => array(
+            'name'             => esc_html(__('Our Services', 'pexr')),
+            'singular_name'    => esc_html(__('Our service', 'pexr')),
+            'add_new'          => esc_html(__('Add New Our Service', 'pexr')),
+            'not_found'        => esc_html(__('not Our service found', 'pexr')),
+            'add_new_item'     => esc_html(__('Add New Our Service', 'pexr')),
+            'edit_item'        => esc_html(__('Edit Our Service', 'pexr')),
+            'featured_image'   => esc_html(__('Our Service Image', 'pexr')),
+            'set_featured_image' => esc_html(__('Set Our Service Image', 'pexr')),
+            'remove_featured_image' => esc_html(__('Remove Our Service Image', 'pexr')),
+
+
+        ),
+        'public'     => true,
+        'rewrite'    => array(
+            'slug'               => 'our-services'
+        ),       
+        'capability_type' => 'page',
+        'supports'     =>  array('title', 'editor'),
+
+    ));
    
 
 };

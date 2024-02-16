@@ -628,6 +628,28 @@ Redux::set_section($opt_name, array(
 
 	)
 ));
+// Our Services area heading
+Redux::set_section($opt_name, array(
+	'title'   => 'Our Services section Heading',
+	'desc'    => __('This is Our Services section heading area', "pexr"),
+	'id'      => 'pexr_our_services_heading_area',
+	'subsection' => true,
+	'fields'  => array(
+		array(
+			'id'              =>  'pexr_our_services_heading_title',
+			'type'            => 'text',
+			'title'           => __('Our Services Heading Title', 'pexr'),
+			'default'         => __('Our Serivices', 'pexr')
+		),
+		array(
+			'id'              =>  'pexr_our_services_heading_content',
+			'type'            => 'textarea',
+			'title'           => __('Our Services Heading Title', 'pexr'),
+			'default'         => __('We have the experience and the knowledge to get your vision comes true', 'pexr')
+		),
+
+	)
+));
 // All pexr heading section end
 
 // What we do area bottom start
